@@ -48,14 +48,14 @@
 ## Запуск проекта локально
 
 1. Клонируйте репозиторий:
-   ```bash
-   git clone [https://github.com/Ramina07/blumen-shop-fullstack.git](https://github.com/Ramina07/blumen-shop-fullstack.git)
+```bash
+git clone [https://github.com/Ramina07/blumen-shop-fullstack.git](https://github.com/Ramina07/blumen-shop-fullstack.git)
 Установите зависимости:
 
 Bash
 cd blumen-shop/backend
 npm install
-Создайте файл .env в папке backend и добавьте свои ключи:
+Настройте файл .env в папке backend:
 
 Фрагмент кода
 PORT=5050
@@ -66,8 +66,6 @@ JWT_SECRET=your_secret_key
 Bash
 node server.js
 Автор
-Рамина Кужентаева
-
-Software Engineering Student at AITU
+Рамина Кужентаева Software Engineering Student at AITU
 
 GitHub: github.com/Ramina07
