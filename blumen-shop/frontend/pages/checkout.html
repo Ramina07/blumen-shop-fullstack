@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>BLUMEN — оформление заказа</title>
+  <link rel="stylesheet" href="/css/styles.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="container topbar__inner">
+      <a class="brand" href="/">
+        <span class="brand__logo" id="logoSlot"></span>
+        <span>
+          <div class="brand__name">BLUMEN</div>
+          <div class="brand__city">Уральск • оформление заказа</div>
+        </span>
+      </a>
+      <nav class="nav">
+        <a href="/">Каталог</a>
+        <a href="/pages/delivery.html">Доставка</a>
+        <a href="/pages/contacts.html">Контакты</a>
+        <a href="/pages/orders.html" id="ordersLink" style="display:none;">Мои заказы</a>
+      </nav>
+      <div class="actions">
+        <button class="btn" id="logoutBtn" style="display:none;">Выйти</button>
+        <a class="btn btn--primary" href="/">На главную</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="container" style="padding:20px 0 40px">
+    <div class="card" style="padding:18px">
+      <h2 style="margin:0 0 6px">Оформление заказа</h2>
+      <p style="margin:0 0 16px; color:rgba(159,176,166,.95)">
+        Проверьте корзину и заполните данные для доставки по Уральску.
+      </p>
+
+      <div class="split">
+        <div>
+          <h3 style="margin:0 0 10px; font-size:16px">Ваш заказ</h3>
+          <div id="checkoutCart"></div>
+
+          <div style="margin-top:12px; padding-top:12px; border-top:1px solid rgba(255,255,255,.08)">
+            <div class="totals">
+              <div>Сумма товаров: <span id="itemsSum">0 ₸</span></div>
+              <div>Доставка: <span id="deliveryFee">0 ₸</span></div>
+              <b>Итого: <span id="totalSum">0 ₸</span></b>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <h3 style="margin:0 0 10px; font-size:16px">Данные для доставки</h3>
+          <form class="form" id="checkoutForm">
+            <div class="split">
+              <div class="field">
+                <label>Имя получателя</label>
+                <input class="input" name="name" required placeholder="Имя" />
+              </div>
+              <div class="field">
+                <label>Телефон</label>
+                <input class="input" name="phone" required placeholder="+7 (7XX) XXX-XX-XX" />
+              </div>
+            </div>
+
+            <div class="field">
+              <label>Адрес (Уральск)</label>
+              <input class="input" name="address" required placeholder="Улица, дом, квартира" />
+            </div>
+
+            <div class="split">
+              <div class="field">
+                <label>Дата (необязательно)</label>
+                <input class="input" name="date" placeholder="Напр.: 8 марта" />
+              </div>
+              <div class="field">
+                <label>Время (необязательно)</label>
+                <input class="input" name="time" placeholder="Напр.: 14:00–16:00" />
+              </div>
+            </div>
+
+            <div class="field">
+              <label>Комментарий курьеру</label>
+              <textarea name="comment" placeholder="Подъезд, этаж, код домофона, пожелания…"></textarea>
+            </div>
+
+            <div class="field">
+              <label>Способ оплаты</label>
+              <select class="input" name="paymentMethod" required>
+                <option value="">Выберите</option>
+                <option value="kaspi">Kaspi (перевод/QR)</option>
+                <option value="card">Карта онлайн</option>
+                <option value="cash">Наличные курьеру</option>
+              </select>
+            </div>
+
+            <button class="btn btn--primary" type="submit">Подтвердить и создать заказ</button>
+            <p class="note" style="margin:6px 0 0">
+              После создания заказа менеджер свяжется с вами для подтверждения.
+            </p>
+          </form>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <div class="toast" id="toast"></div>
+
+  <script src="/js/config.js"></script>
+  <script src="/js/api.js"></script>
+  <script src="/js/storage.js"></script>
+  <script src="/js/ui.js"></script>
+  <script src="/js/checkout.js"></script>
+</body>
+</html>

@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>BLUMEN — вход</title>
+  <link rel="stylesheet" href="/css/styles.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="container topbar__inner">
+      <a class="brand" href="/">
+        <span class="brand__logo" id="logoSlot"></span>
+        <span>
+          <div class="brand__name">BLUMEN</div>
+          <div class="brand__city">Уральск • доставка цветов</div>
+        </span>
+      </a>
+      <nav class="nav">
+        <a href="/">Каталог</a>
+        <a href="/pages/delivery.html">Доставка</a>
+        <a href="/pages/contacts.html">Контакты</a>
+      </nav>
+      <div class="actions">
+        <a class="btn btn--primary" href="/">На главную</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="container" style="padding:20px 0 40px">
+    <div class="card" style="padding:18px">
+      <h2 style="margin:0 0 6px">Вход / Регистрация</h2>
+      <p style="margin:0 0 16px; color:rgba(159,176,166,.95)">Чтобы оформлять заказы, войдите или создайте аккаунт.</p>
+
+      <div class="split">
+        <div>
+          <h3 style="margin:0 0 10px; font-size:16px">Вход</h3>
+          <form class="form" id="loginForm">
+            <div class="field">
+              <label>Email</label>
+              <input class="input" type="email" name="email" required placeholder="name@mail.com" />
+            </div>
+            <div class="field">
+              <label>Пароль</label>
+              <input class="input" type="password" name="password" required placeholder="••••••••" />
+            </div>
+            <button class="btn btn--primary" type="submit">Войти</button>
+          </form>
+        </div>
+
+        <div>
+          <h3 style="margin:0 0 10px; font-size:16px">Регистрация</h3>
+          <form class="form" id="registerForm">
+            <div class="field">
+              <label>Имя</label>
+              <input class="input" type="text" name="name" required placeholder="Ваше имя" />
+            </div>
+            <div class="field">
+              <label>Email</label>
+              <input class="input" type="email" name="email" required placeholder="name@mail.com" />
+            </div>
+            <div class="field">
+              <label>Телефон</label>
+              <input class="input" type="text" name="phone" placeholder="+7 (7XX) XXX-XX-XX" />
+            </div>
+            <div class="field">
+              <label>Пароль</label>
+              <input class="input" type="password" name="password" required placeholder="Минимум 6 символов" />
+            </div>
+            <button class="btn btn--primary" type="submit">Создать аккаунт</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <div class="toast" id="toast"></div>
+
+  <script src="/js/config.js"></script>
+  <script src="/js/api.js"></script>
+  <script src="/js/storage.js"></script>
+  <script src="/js/ui.js"></script>
+  <script src="/js/login.js"></script>
+</body>
+</html>

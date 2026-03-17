@@ -1,0 +1,17 @@
+Сюда добавь изображения:
+
+1) Главный баннер:
+- frontend/assets/img/hero.jpg
+
+2) Товары:
+- frontend/assets/img/products/rose-red-51.jpg
+- frontend/assets/img/products/tulip-mix-25.jpg
+- frontend/assets/img/products/peony-9.jpg
+- frontend/assets/img/products/euro-cotton.jpg
+- frontend/assets/img/products/box-pink.jpg
+- frontend/assets/img/products/basket-party.jpg
+- frontend/assets/img/products/daisy-35.jpg
+- frontend/assets/img/products/chrys-15.jpg
+- frontend/assets/img/products/rose-pink.jpg
+
+Если названия другие — просто измени поле images в MongoDB (коллекция products).

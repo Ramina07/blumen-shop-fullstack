@@ -1,0 +1,182 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>BLUMEN — flower boutique | Уральск</title>
+  <link rel="stylesheet" href="/css/styles.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="container topbar__inner">
+      <a class="brand" href="/">
+        <span class="brand__logo" aria-hidden="true" id="logoSlot"></span>
+        <span>
+          <div class="brand__name">BLUMEN</div>
+          <div class="brand__city">Уральск • доставка цветов</div>
+        </span>
+      </a>
+
+      <nav class="nav">
+        <a href="/#catalog">Каталог</a>
+        <a href="/pages/delivery.html">Доставка</a>
+        <a href="/pages/contacts.html">Контакты</a>
+        <a href="/pages/orders.html" id="ordersLink" style="display:none;">Мои заказы</a>
+      </nav>
+
+      <div class="actions">
+        <div class="pill" title="Поиск по каталогу">
+          <span id="searchIcon"></span>
+          <input id="searchInput" placeholder="Например: розы, тюльпаны, коробка…" />
+        </div>
+        <button class="btn" id="loginBtn">Войти</button>
+        <button class="btn btn--primary" id="cartBtn">Корзина (<span id="cartCount">0</span>)</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <div class="hero__grid">
+        <div class="card hero__left">
+          <span class="badge">Flower boutique • Уральск</span>
+          <h1 class="hero__title">BLUMEN — букеты, которые говорят вместо тебя</h1>
+          <p class="hero__subtitle">
+            Свежие цветы, аккуратная сборка, быстрая доставка по городу.
+            Оплата картой или наличными. Фото букета перед отправкой.
+          </p>
+
+          <div class="hero__stats">
+            <div class="stat"><b>Доставка</b><span>по Уральску • 60–120 минут</span></div>
+            <div class="stat"><b>Оплата</b><span>Kaspi / карта / наличные</span></div>
+            <div class="stat"><b>Поддержка</b><span>WhatsApp +7 (771) 717-88-88</span></div>
+          </div>
+
+          <div class="hero__cta">
+  <a href="#catalog" class="btn btn--primary">Открыть каталог</a>
+  <a href="/pages/delivery.html" class="btn">Как работает доставка</a>
+  <a href="https://instagram.com/blumen.oral" target="_blank" class="btn">
+    Instagram →
+  </a>
+</div>
+        </div>
+
+        <div class="card hero__right">
+          <div class="hero__banner">
+            <div class="placeholder">
+              <div class="hero-banner">
+                  <img src="/assets/img/hero.jpg" alt="Blumen">
+              </div>
+            </div>
+          </div>
+          <div class="hero__cta">
+            <span class="badge">Скидки и хиты</span>
+            <span class="badge">Композиции в коробке</span>
+            <span class="badge">Пионы • Тюльпаны • Розы</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="catalog" class="section">
+      <div class="section__head">
+        <h2 class="section__title">Каталог</h2>
+
+<div class="filters">
+
+  <select class="select" id="categorySelect" aria-label="Категория">
+
+    <option value="">Все</option>
+
+    <!-- категории -->
+    <option value="roses">Розы</option>
+    <option value="tulips">Тюльпаны</option>
+    <option value="peonies">Пионы</option>
+    <option value="bouquets">Сборные букеты</option>
+    <option value="boxes">В коробке</option>
+    <option value="composition">Композиции</option>
+    <option value="chrysanthemums">Хризантемы</option>
+    <option value="daisies">Ромашки</option>
+    <option value="hydrangea">Гортензии</option>
+
+    <!-- фильтр по тегам -->
+    <option value="hit">Хиты</option>
+    <option value="wow">WOW букеты</option>
+    <option value="combo">Комбо наборы</option>
+    <option value="mono">Монобукеты</option>
+
+  </select>
+
+
+  <select class="select" id="sortSelect" aria-label="Сортировка">
+
+    <option value="popular">Сначала новые</option>
+    <option value="price_asc">Цена: по возрастанию</option>
+    <option value="price_desc">Цена: по убыванию</option>
+
+  </select>
+
+</div>
+      </div>
+
+      <div class="grid" id="productsGrid"></div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__grid">
+      <div>
+        <h4>BLUMEN</h4>
+        <p>Flower boutique в Уральске. Доставка цветов и подарков.</p>
+        <p class="small">© <span id="year"></span> BLUMEN. Все права защищены.</p>
+      </div>
+      <div>
+        <h4>Информация</h4>
+        <p><a href="/pages/delivery.html">Доставка и оплата</a></p>
+        <p><a href="/pages/contacts.html">Контакты</a></p>
+        <p><a href="/pages/policy.html">Политика конфиденциальности</a></p>
+      </div>
+      <div>
+        <h4>Связь</h4>
+        <p>Уральск</p>
+        <p>WhatsApp: +7 (771) 717-88-88</p>
+        <p>Instagram: @blumen_uralsk</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Модал корзины -->
+  <div class="modal" id="cartModal" aria-hidden="true">
+    <div class="modal__panel">
+      <div class="modal__head">
+        <h3>Корзина</h3>
+        <button class="btn" id="closeCartBtn">Закрыть</button>
+      </div>
+      <div class="modal__body">
+        <div class="cart__list" id="cartList"></div>
+
+        <div class="cart__footer">
+          <div class="totals">
+            <div>Сумма товаров: <span id="itemsSum">0 ₸</span></div>
+            <div>Доставка: <span id="deliveryFee">0 ₸</span></div>
+            <b>Итого: <span id="totalSum">0 ₸</span></b>
+            <div class="note">Стоимость доставки может зависеть от района. По умолчанию 1500 ₸.</div>
+          </div>
+          <div style="display:flex; gap:10px; flex-wrap:wrap">
+            <button class="btn btn--danger" id="clearCartBtn">Очистить</button>
+            <a class="btn btn--primary" href="/pages/checkout.html" id="checkoutBtn">Оформить заказ</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="toast" id="toast"></div>
+
+  <script src="/js/config.js"></script>
+  <script src="/js/api.js"></script>
+  <script src="/js/storage.js"></script>
+  <script src="/js/ui.js"></script>
+  <script src="/js/main.js"></script>
+</body>
+</html>

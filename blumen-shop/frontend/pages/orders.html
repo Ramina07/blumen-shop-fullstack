@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>BLUMEN — мои заказы</title>
+  <link rel="stylesheet" href="/css/styles.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="container topbar__inner">
+      <a class="brand" href="/">
+        <span class="brand__logo" id="logoSlot"></span>
+        <span>
+          <div class="brand__name">BLUMEN</div>
+          <div class="brand__city">Уральск • мои заказы</div>
+        </span>
+      </a>
+      <nav class="nav">
+        <a href="/">Каталог</a>
+        <a href="/pages/delivery.html">Доставка</a>
+        <a href="/pages/contacts.html">Контакты</a>
+      </nav>
+      <div class="actions">
+        <button class="btn" id="logoutBtn">Выйти</button>
+        <a class="btn btn--primary" href="/">На главную</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="container" style="padding:20px 0 40px">
+    <div class="card" style="padding:18px">
+      <h2 style="margin:0 0 6px">Мои заказы</h2>
+      <p style="margin:0 0 16px; color:rgba(159,176,166,.95)">
+        История ваших заказов в BLUMEN.
+      </p>
+
+      <div id="ordersList"></div>
+    </div>
+  </main>
+
+  <div class="toast" id="toast"></div>
+
+  <script src="/js/config.js"></script>
+  <script src="/js/api.js"></script>
+  <script src="/js/storage.js"></script>
+  <script src="/js/ui.js"></script>
+  <script src="/js/orders.js"></script>
+</body>
+</html>
