@@ -48,24 +48,25 @@
 ## Запуск проекта локально
 
 1. Клонируйте репозиторий:
-```bash
+```
 git clone [https://github.com/Ramina07/blumen-shop-fullstack.git](https://github.com/Ramina07/blumen-shop-fullstack.git)
-Установите зависимости:
-
-Bash
+```
+2. Установите зависимости:
+```
 cd blumen-shop/backend
 npm install
-Настройте файл .env в папке backend:
-
-Фрагмент кода
+```
+3. Настройте файл .env в папке backend:
+```
 PORT=5050
 MONGO_URI=your_mongodb_uri
 JWT_SECRET=your_secret_key
-Запустите сервер:
-
-Bash
+```
+4. Запустите сервер:
+```
 node server.js
-Автор
+```
+Автор:
 Рамина Кужентаева Software Engineering Student at AITU
 
 GitHub: github.com/Ramina07
